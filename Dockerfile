@@ -1,15 +1,11 @@
 FROM hypriot/rpi-node:argon
-ENV QEMU_EXECVE 1
-COPY qemu-arm-static /usr/bin
-
 RUN [ "cross-build-start" ]
-# Create src folder
+# Create src folder and clone gladys git
 RUN mkdir /src && git clone --depth 1 git://github.com/GladysProject/Gladys /src
 
 WORKDIR /src
-#ADD . /src
-RUN npm install
-RUN npm install -g grunt-cli
+RUN npm config set unsafe-perm true && npm install
+RUN npm install -g grunt
 RUN grunt buildProd
 
 # Export listening port
