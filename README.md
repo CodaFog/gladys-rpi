@@ -1,12 +1,12 @@
 ## gladys-rpi Dockerfile
 
 
-This repository contains **Dockerfile** of a dockerized [Gladys](https://gladysproject.com/fr/) based on a Hypriot image
+This repository contains **Dockerfile** of a dockerized [Gladys](https://gladysproject.com/fr/) based on a Resin Raspberry Node image
 
 
 ### Base Docker Image
 
-* [hypriot/rpi-node:argon](https://hub.docker.com/r/hypriot/rpi-node/)
+* [resin/raspberrypi3-node](https://hub.docker.com/r/resin/raspberrypi3-node/)
 
 ### Installation
 
