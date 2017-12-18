@@ -1,5 +1,6 @@
-FROM hypriot/rpi-node:argon
-#RUN [ "cross-build-start" ]
+FROM resin/raspberrypi3-node:6.12
+#FROM hypriot/rpi-node:argon
+RUN [ "cross-build-start" ]
 # Create src folder and clone gladys git
 RUN mkdir /src && git clone --depth 1 git://github.com/GladysProject/Gladys /src
 
@@ -12,4 +13,4 @@ RUN grunt buildProd
 EXPOSE 8080
 
 CMD ["node" ,"app.js"]
-#RUN [ "cross-build-end" ]
+RUN [ "cross-build-end" ]
