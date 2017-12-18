@@ -31,3 +31,7 @@ This repository contains **Dockerfile** of a dockerized [Gladys](https://gladysp
     docker run --name gladys-node --restart=always -p 8080:8080 -v /home/pi/hooks:/usr/local/lib/node_modules/gladys/api/hooks -e NODE_ENV=production -e MYSQL_HOST=mysql -e MYSQL_PASSWORD=supersecretpassword -e MYSQL_PORT=3306 --link gladys-mysql:mysql -d codafog/gladys-rpi
 ```
 6. Connect to your Raspberry IP at port 8080 with a web browser and enjoy playing with Gladys.
+
+## Github
+
+Github address : https://github.com/CodaFog/gladys-rpi
